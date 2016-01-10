@@ -10,11 +10,11 @@ import java.util.Arrays;
 public class Application {
 
     public static void main(String[] args) {
-        ApplicationContext ctx = SpringApplication.run(Application.class, args);
+        ApplicationContext context = SpringApplication.run(Application.class, args);
 
         System.out.println("Let's start with Spring Boot");
 
-        String[] beanNames = ctx.getBeanDefinitionNames();
+        String[] beanNames = context.getBeanDefinitionNames();
         Arrays.sort(beanNames);
         for (String beanName : beanNames) {
             System.out.println(beanName);
