@@ -1,10 +1,14 @@
 package api.bean;
 
+import javax.xml.bind.annotation.XmlRootElement;
 
+@XmlRootElement
 public class Message {
     private int id;
     private String name;
     private String description;
+
+    public Message(){}
 
     public int getId() {
         return id;
