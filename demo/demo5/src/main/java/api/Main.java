@@ -21,6 +21,10 @@ public class Main {
 
         put("/message", new AddNewMessage(), new JsonTransformer());
 
+        after((request, response) -> {
+            response.type("application/json");
+        });
+
         exception(NotFoundException.class, (e, request, response) -> {
             response.status(404);
             response.body("Resource not found");
